@@ -1,0 +1,139 @@
+$green:#06A9B3;
+$black:#333333;
+$gray: #B9BDBF;
+$white: #FFFFFF;
+$bg-gray:#F2F8FB;
+body {
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "main" "footer";
+    min-height: 100vh;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: $black;
+}
+
+.container {
+    width: 1440px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: $green;
+    &__menu {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    &__menu-item {
+        padding: 30px 64px 30px 0;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    &__menu-link {}
+    &__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 112px 30px 0;
+    }
+    &__logo-img {}
+    &__user-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+        li {
+            padding: 30px 64px 30px 0;
+        }
+        li:last-child {
+            padding-right: 0;
+        }
+    }
+    &__user-search {}
+    &__user-login {
+        span {
+            color: $black;
+        }
+    }
+    &__user-link {}
+}
+
+// END header
+.nav {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+}
+
+.main {
+    grid-area: main;
+}
+
+.intro {
+    padding-top: 80px;
+    background-color: #F2F8FB;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 210px 1fr;
+    }
+    &__content {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1/2;
+        z-index: 50;
+        display: flex;
+        flex-direction: column;
+        padding-left: 117px;
+        h1 {
+            font-weight: bold;
+            font-size: 44px;
+            line-height: 62px;
+        }
+    }
+    &__suptitle {
+        order: -1;
+        color: $gray;
+    }
+    &__subtitle {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    &__social-list {}
+    &__social-item {}
+    &__social-link {}
+    &__slider {
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    &__slider-list {}
+    &__slider-item {}
+    &__slider-img {}
+    &__slider-controls {}
+    &__slider-btn {}
+    &__slider-number {}
+}
+
+.container {}
+
+.button {
+    align-self: start;
+    padding: 16px 32px;
+    font-weight: 500;
+    color: #FFFFFF;
+    border: none;
+    background-color: $green;
+}
